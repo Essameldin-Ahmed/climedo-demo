@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand" [routerLink]="['/']">Climendo</a>
+        <button class="navbar-toggler" type="button" (click)="showMeue = !showMeue">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" [ngClass]="{show: showMeue}" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" [routerLink]="['/']">about <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" [routerLink]="['/']">careers <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" [routerLink]="['/']">contact <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+</nav>

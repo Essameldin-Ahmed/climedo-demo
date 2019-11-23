@@ -1,0 +1,9 @@
+<section class="data-wrapper my-5" *ngIf="dataSource">
+    <div class="container">
+        <mat-tab-group>
+            <mat-tab [label]="singleList.name" *ngFor="let singleList of dataSource">
+                <app-single-data [singleList]="singleList.list" ></app-single-data>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</section>

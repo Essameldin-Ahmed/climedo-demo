@@ -1,0 +1,14 @@
+<section class="main-section">
+    <div class="container">
+        <p>
+            Upload Excel file (singlesheet or multi)sheet or CSV File !
+        </p>
+        <div class="custom-file">
+            <input type="file" name="files" class="custom-file-input" id="customFileLang" #uploads (change)="onChange(uploads.files)"
+                value="process" />
+            <label class="custom-file-label" for="customFileLang">Parse File</label>
+        </div>
+
+    </div>
+</section>
+<app-csv-view [dataSource]="dataList" *ngIf="dataList && dataList.length > 0"></app-csv-view>
